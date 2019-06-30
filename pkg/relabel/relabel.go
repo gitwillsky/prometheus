@@ -65,7 +65,7 @@ func (a *Action) UnmarshalYAML(unmarshal func(interface{}) error) error {
 		return err
 	}
 	switch act := Action(strings.ToLower(s)); act {
-	case Replace, Keep, Drop, HashMod, LabelMap, LabelDrop, LabelKeep:
+	case Replace, Keep, Drop, Take, HashMod, LabelMap, LabelDrop, LabelKeep:
 		*a = act
 		return nil
 	}
